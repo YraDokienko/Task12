@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Pizzas</title>
 </head>
 <body>
-$END$
+    <h1></h1>
+    <ul>
+        {% for pizza in data %}
+        <li> {{pizza.name}} : цена = {{pizza.price}} грн. <p></li>
+        {%endfor%}
+    </ul>
+    <form action="/pizzaform/">
+        <button> Добавить пиццу </button>
+    </form>
 </body>
 </html>

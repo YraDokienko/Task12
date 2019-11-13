@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
+    <title>PizzaForm</title>
+   </head>
 <body>
-$END$
+    <form method="post"> {% csrf_token%}
+        {{form.as_p}}
+        <input type="submit" value="Сохранить">
+    </form>
+    <p>
+        <form action="/">
+            <button> ОТМЕНА </button>
+        </form>
+    </p>
+
 </body>
 </html>
